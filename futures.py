@@ -5,7 +5,7 @@ async def set_future_result(future, value):
 
     # Set the result of the future
     future.set_result(value)
-    print(f"Future result is set to {value}")
+    print(f"Set the future result to: {value}")
 
 async def main():
     # get_running_loop() is used to get the current running event loop
@@ -19,6 +19,6 @@ async def main():
 
     # Wait for the future result
     result = await future
-    print(f"Future result is {result}")
+    print(f"Received the future result: {result}")
 
 asyncio.run(main())
